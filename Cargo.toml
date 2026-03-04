@@ -1,0 +1,20 @@
+[package]
+name = "zpath"
+description = "zvariant-based wrapper for PathBuf"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.87"
+
+license = "MIT"
+repository = "https://github.com/olvrlrnz/zpath.git"
+keywords = ["dbus", "ipc"]
+categories = ["os::unix-apis"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+zvariant = { version = "5.10" }
+
+[dev-dependencies]
+serde_json = "1.0"
+tokio = { version = "1.50", features = ["full"] }
+zbus = { version = "5.14", features = ["p2p", "tokio"] }
